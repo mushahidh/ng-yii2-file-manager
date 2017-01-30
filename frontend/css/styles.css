@@ -1,0 +1,278 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 25, 2016, 1:11:22 PM
+    Author     : Usman
+*/
+
+/* CSS Document */
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+/* ---------- FONTAWESOME ---------- */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #606468;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+}
+#login-body
+{background: #2c3338;}
+.login-link {
+    color: #eee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    border: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    content: ' ';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.container-login {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* ---------- LOGIN ---------- */
+#login {
+    width: 280px;
+}
+
+#login form span {
+    background-color: #363b41;
+    border-radius: 3px 0px 0px 3px;
+    color: #606468;
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+
+#login form input {
+    height: 50px;
+}
+
+#login form input[type="text"], input[type="password"] {
+    background-color: #3b4148;
+    border-radius: 0px 3px 3px 0px;
+    color: #606468;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 230px;
+}
+
+#login form input[type="submit"] {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #ea4c88;
+    color: #eee;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    width: 280px;
+}
+
+#login form input[type="submit"]:hover {
+    background-color: #d44179;
+}
+
+#login > p {
+    text-align: center;
+}
+
+#login > p span {
+    padding-left: 5px;
+}
+
+.header
+{
+    height: 60px;
+    background-color:#4d394b;
+}
+.body
+{
+    width: 1054px;
+    height: 1054px;
+}
+.mg-top-10
+{
+    margin-top:10px;
+}
+.bord-bot-1px-white
+{
+    border-bottom: 1px solid white;
+}
+#aa-footer
+{
+    background-color: #4d394b;
+    display: inline;
+    float: left;
+    padding: 30px 0;
+    width: 100%;
+    border-top: 10px solid #1E8BA2;
+}
+.aa-footer-left
+{
+    display: inline;
+    float: left;
+    width: 100%;
+}
+.font-size-45
+{
+    font-size: 45px;
+    color:#2196f3;
+}
+.text-dec-none
+{
+    text-decoration: none !important;
+}
+.mg-top-15
+{
+    margin-top: 15px;
+}
+.height-150-vh
+{
+    height: 150vh;
+}
+.logo
+{
+
+    margin-top: 20px;
+
+    margin-left: 0px;
+
+    font-size: 20px;
+}
+.color-white
+{
+    color:white;
+}
+.bg-4d394b
+{
+    background-color: #4d394b;
+}
+.pd-25
+{
+    padding: 0;
+
+    overflow: hidden;
+
+    font-size: 12px;
+
+    min-height: 110px;
+
+    word-wrap: break-word;
+
+}
+.back
+{
+    display: inline-block;
+    margin-bottom: 15px;
+   width: 100%;
+}
+.cursor-point
+{
+    cursor:pointer;
+}
+.mg-0
+{
+    margin:0;
+}
+.sidebar
+{
+    border: 1px solid #bec0c1;
+    min-height: 75px;
+    background: #f1f1f1;
+    margin-top: 0px;
+}
+.text-align-center{
+    text-align: center;
+}
+.text-dec-none.cursor-point > span{
+    display: block;
+}
+/*
+.modal{
+    width: 100%;
+    background: transparent;
+    margin: 0px auto;
+}*/
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+    color: #fff;
+}
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+    padding: 0px 4px;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+.pd-left-0
+{
+    padding-left: 0px;
+}

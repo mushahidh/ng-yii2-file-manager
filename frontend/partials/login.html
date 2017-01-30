@@ -1,0 +1,43 @@
+<style>
+    header,  #aa-footer{
+        display:none;
+    }
+</style>
+<div id="login-body">
+
+    <div class="container-login">
+
+        <div id="login">
+
+            <form name="loginForm" ng-submit="login()" novalidate >
+
+                <fieldset class="clearfix">
+                    <p ng-show="loginForm.username.$invalid && !loginForm.username.$pristine" class="help-block ">Please Enter the username</p>
+                    <p>
+                        <span class="fontawesome-user"></span>
+                        <input type="text" name="username" ng-model="loginData.username" required>
+                    </p>
+                    <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block ">Please Enter the Password</p>
+
+                    <p>
+                        <span class="fontawesome-lock"></span>
+                        <input type="password" name="password" ng-model="loginData.password" required>
+                    </p> 
+                    <p class="help-block text-align-center">{{error_response_text}}</p>
+
+                    <p>
+                        <input type="submit" value="Sign In" ng-disabled="loginForm.$invalid" >
+                    </p>
+
+                </fieldset>
+
+
+            </form>
+
+            <p>Not a member? <a class="" href="#">Sign up now</a><span class="fontawesome-arrow-right"></span></p>
+
+        </div> <!-- end login -->
+
+    </div>
+
+</div>

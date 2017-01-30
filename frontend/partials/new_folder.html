@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h3 class="modal-title text-align-center" id="modal-title">Create New Folder</h3>
+</div>
+<div id="modal-body" ng-controller="DirectoryController">
+    <div class="col-md-12 col-sm-12 col-xs-12" >
+        <form name="folderForm" ng-submit="create_folder()" enctype="multipart/form-data">
+            <p ng-show="folderForm.folder_name.$invalid && !folderForm.folder_name.$pristine" class="help-block ">Please Enter the folder name</p>
+            <label for="text" class="mg-top-10">Folder Name:</label>
+            <input type="text" class="form-control mg-top-10" name="foldername" ng-model="folderData.foldername" placeholder="Enter folder name please" ng-minlength="2" ng-maxlength="30" required>
+            <input type="submit" value="Create Folder" class="btn btn-primary mg-top-10" ng-disabled="folderForm.$invalid" >
+            <button class="btn btn-warning mg-top-10" type="button" ng-click="ctrl.cancel()">Cancel</button>
+
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+</div>  
+

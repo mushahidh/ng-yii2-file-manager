@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1f6ea7e1d0c69a26484eb7f3e0627ee0",
+    "hash": "cbe067c7c015e1a0e2c1ce17a359a27a",
     "content-hash": "a6a81d382a33baceb0918caae14f9f4c",
     "packages": [
         {
@@ -366,12 +366,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "8c61eeabf62cd28b3a478d6fa69c68a7f18518e3"
+                "reference": "221603ae2c4117ea98b0623bd24a4e9fc62b2ec5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/8c61eeabf62cd28b3a478d6fa69c68a7f18518e3",
-                "reference": "8c61eeabf62cd28b3a478d6fa69c68a7f18518e3",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/221603ae2c4117ea98b0623bd24a4e9fc62b2ec5",
+                "reference": "221603ae2c4117ea98b0623bd24a4e9fc62b2ec5",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +458,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2017-01-02 08:13:43"
+            "time": "2017-01-30 08:42:52"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -466,12 +466,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "bd2427e162226297891670c77be286385ca4805c"
+                "reference": "1629f04186cc74ba544c7f17e223020e1d2f944e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/bd2427e162226297891670c77be286385ca4805c",
-                "reference": "bd2427e162226297891670c77be286385ca4805c",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/1629f04186cc74ba544c7f17e223020e1d2f944e",
+                "reference": "1629f04186cc74ba544c7f17e223020e1d2f944e",
                 "shasum": ""
             },
             "require": {
@@ -508,7 +508,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2016-12-19 12:53:18"
+            "time": "2017-01-17 21:50:17"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -776,12 +776,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "e28ccc70fe052187c2d060f67241d05e95ff5eae"
+                "reference": "35d9d0b28c6f3dce25a3dcdb1760277a766ad1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/e28ccc70fe052187c2d060f67241d05e95ff5eae",
-                "reference": "e28ccc70fe052187c2d060f67241d05e95ff5eae",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/35d9d0b28c6f3dce25a3dcdb1760277a766ad1b7",
+                "reference": "35d9d0b28c6f3dce25a3dcdb1760277a766ad1b7",
                 "shasum": ""
             },
             "require": {
@@ -821,7 +821,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2016-12-21 16:50:20"
+            "time": "2017-01-28 20:27:05"
         }
     ],
     "aliases": [],

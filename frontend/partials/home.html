@@ -1,0 +1,137 @@
+<div class="row">
+    <!-- Modal for Add folder -->
+    <div id="add_folder" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-body-small">
+            <div class="modal-content popups">
+                <div class="modal-header fb-header text-align-center">
+                    Add Folder
+                </div>
+                <div class="modal-body">
+                    <form name="folderForm" ng-submit="create_folder()" enctype="multipart/form-data">
+                        <p ng-show="folderForm.folder_name.$invalid && !folderForm.folder_name.$pristine" class="help-block ">Please Enter the folder name</p>
+                        <label for="text" class="mg-top-10">Folder Name:</label>
+                        <input type="text" class="form-control mg-top-10" name="foldername" ng-model="folderData.foldername" placeholder="Enter folder name please" ng-minlength="2" ng-maxlength="30" required>
+                        <input type="submit" value="Create Folder" class="btn btn-primary mg-top-10" ng-disabled="folderForm.$invalid" >
+                        <button class="btn btn-warning mg-top-10" type="button" data-dismiss="modal">Cancel</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Delete file -->
+    <div id="delet_file" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-body-small">
+            <div class="modal-content popups">
+                <div class="modal-header fb-header text-align-center">
+                    Delete
+                </div>
+                <div class="modal-body">
+                    <form name="folderForm" ng-submit="create_folder()" enctype="multipart/form-data">
+                        <p>Are you sure you want to delete ?</p>
+                        <button class="btn btn-danger mg-top-10" type="button" ng-click="deleteFile()">Delete</button>
+                        <button class="btn btn-warning mg-top-10" type="button" data-dismiss="modal">Cancel</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for add folder ends here-->
+
+    <!-- Modal for Add folder -->
+    <div id="upload_files" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-body-small">
+            <div class="modal-content popups">
+                <div class="modal-header fb-header text-align-center">
+                    Upload Files
+                </div>
+                <div class="modal-body">
+                    <form name="fileForm" ng-submit="uploadFiles()" enctype="multipart/form-data">
+                        
+                        <p ng-show="fileForm.softwarename.$invalid && !fileForm.softwarename.$pristine" class="help-block ">Please Enter the File name</p>
+                        <label for="text" class="mg-top-10">Software Name:</label>
+                        <input type="text" class="form-control mg-top-10" name="softwarename" ng-model="upload_type.softwarename" placeholder="Enter Software name please" ng-minlength="2" ng-maxlength="30" required>
+                        
+                        <p ng-show="fileForm.version.$invalid && !fileForm.version.$pristine" class="help-block ">Please Enter the Version No</p>
+                        <label for="text" class="mg-top-10">Version:</label>
+                        <input type="text" class="form-control mg-top-10" name="version" ng-model="upload_type.version" placeholder="Enter Version No please" ng-minlength="1" ng-maxlength="5" required>
+                        
+                        <button class="btn btn-link pd-left-0" ngf-select="uploadFiles($files)" multiple 
+                                accept="image/*"  ng-if="upload_type.version && upload_type.softwarename" ng-disabled="!upload_type.version && !upload_type.softwarename"> <i class="fa fa-upload" aria-hidden="true"></i> Upload Files</button>
+                        <ul>
+                            <li ng-repeat="f in files" style="font:smaller">
+                                {{f.name}}
+                            </li>
+                        </ul>
+                        <span class="progress" ng-show="progress > 0">
+                            <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+                        </span>
+                        {{errorMsg}}
+                        
+                        <input type="submit" value="Upload Files" class="btn btn-primary mg-top-10" ng-disabled="fileForm.$invalid" ng-click="button_click()">
+                        <button class="btn btn-warning mg-top-10" type="button" data-dismiss="modal">Cancel</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for add folder ends here-->
+
+
+    <div class="col-md-12 col-xs-12 col-sm-12 mg-top-10">
+        <div class="col-md-2 ool-xs-2 col-sm-2 mg-top-10 sidebar">
+            <ul>
+                <li class="mg-top-10 cursor-point"><span ng-click="create_folder_modal()"><i class="fa fa-plus" aria-hidden="true"></i> New Folder</span></li>
+                <li class="mg-top-10 cursor-point">
+                    <span ng-click="upload_files_modal()"><i class="fa fa-upload" aria-hidden="true"></i> Upload Files</span>
+                </li>
+
+            </ul>
+            <script type="text/ng-template" id="myModalContent.html">
+                <div ng-include src="'partials/new_folder.html'"></div> 
+            </script>
+            <div class="modal-parent">
+            </div>
+        </div>
+
+        <div class="col-md-10" ng-if="back_button.length">
+            <a class="cursor-point back" ng-click="back()"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
+        </div>
+
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <div class="col-md-2 col-sm-2 col-xs-6 pd-25 pd-25" ng-repeat="folders in folders_name| unique :folders">
+                <a class="text-dec-none cursor-point" ng-click="sub_folders(folders);
+                                        next(folders)">
+                    <div>
+                        <i class="fa fa-folder-open font-size-45" aria-hidden="true"></i>
+                    </div>
+                    {{folders| replaceName}}
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-6 pd-25 pd-25" ng-repeat="folders in new_folder| unique :folders">
+
+                <a class="text-dec-none cursor-point" ng-click="sub_folders(folders);
+                                        next(folders)">
+                    <div>
+                        <i class="fa fa-folder-open font-size-45" aria-hidden="true"></i>
+                    </div>
+                    {{folders| replaceName}}
+                </a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-6 pd-25 pd-25" ng-repeat="files in files_name| unique : files">
+                <a class="text-dec-none cursor-point" context-menu="menuOptions">
+                    <i class="fa fa-file-o font-size-45" aria-hidden="true"></i>
+                    <span>{{files | replaceName}}</span>
+                </a>
+
+            </div>
+            <div ng-repeat="item in items" context-menu="menuOptions" context-menu-on="click">Left Click: {{item.name}}</div>
+        </div>
+
+    </div>
+    <!--<a id="download" download style="display:none">Download</a>-->
+    <!--<iframe id="download" width="1" height="1" style="display:none"></iframe>-->
+</div>
