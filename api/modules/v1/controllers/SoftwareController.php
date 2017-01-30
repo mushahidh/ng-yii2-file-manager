@@ -91,10 +91,10 @@ class SoftwareController extends ActiveController
 
     public function actionCreateDirectory()
     {
-    	if(isset($_POST['foldername']))
+    	if(isset($_REQUEST['foldername']))
       {
-      $foldername=$_POST['foldername'];
-
+      $foldername=$_REQUEST['foldername'];
+	
     	$path=\Yii::getAlias('@common').'/upload/' ;
     	$folderpath=FileHelper::createDirectory($path.$foldername);
       if(!$folderpath)
@@ -114,6 +114,8 @@ class SoftwareController extends ActiveController
       
       $path=\Yii::getAlias('@common').'/upload/' ;
       FileHelper::createDirectory($path);
+	  return "Folder created in root directory";
+	 
     }
 
     }
@@ -131,7 +133,7 @@ class SoftwareController extends ActiveController
       return $directories;
 }
     public function actionListDirectory(){
-    	$base_url=\Yii::getAlias('@common').'/'.'upload'.'\\';
+    	$base_url=\Yii::getAlias('@common').'\\'.'upload'.'\\';
       if(isset($_GET['foldername']))
       {
          $foldername=$_GET['foldername'];
