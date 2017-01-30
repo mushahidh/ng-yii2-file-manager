@@ -15,7 +15,7 @@ class UploadForm extends Model
     {
         return [
              [['image'], 'safe'],
-            [['image'], 'file', 'skipOnEmpty' => false],
+            [['image'], 'file', 'skipOnEmpty' => false,'maxFiles' => 10],
         ];
     }
     

@@ -95,12 +95,14 @@ class UploadController extends ActiveController
    
         if (Yii::$app->request->isPost) {
 
-        	if (UploadedFile::getInstanceByName('data'))
+        	if (UploadedFile::getInstancesByName('data'))
         	{
-            	$model->image = UploadedFile::getInstanceByName('data');
+
+            	$model->image= UploadedFile::getInstancesByName('data');
+              
               if(isset($_POST['foldername']))
               {
-            	$path=\Yii::getAlias('@common').'/upload/'.$_POST['foldername'];
+            	$path=\Yii::getAlias('@common').'/upload/'.$_POST['foldername'].'/';
                }
             else
             {
@@ -108,13 +110,46 @@ class UploadController extends ActiveController
             }
               FileHelper::createDirectory($path,0777,true);
    			  }
+          $i=0;
 
            if ($model->validate()) 
            {
-            	$basename = $model->image->name;
-            	$model->image->saveAs($path.'/'. $basename);
-            	return $path.$basename;
-         	}   
+            $basename=array();
+              foreach ($model->image as $file) {
+                $basename[] = $file->name;
+
+            	$file->saveAs($path.'/'. $basename[$i]);
+                
+
+            	$i++;
+         	}
+          $prefixed_array = preg_filter('/^/', $path, $basename); 
+         // return sizeof( $prefixed_array);
+         $model=new \common\models\Software;
+
+          foreach($prefixed_array as $array)
+          {
+             
+
+          $model->load(Yii::$app->getRequest()->getBodyParams(), '');
+           $model->id = NULL; 
+          $model->isNewRecord = true;
+              
+          $model->downloadlink=$array;
+          if(!$model->save())
+          {
+             return $model->firstErrors;
+          }
+          else{
+
+              
+              continue;
+          
+          }
+        }
+        return "Software added successfully";
+          
+        }
          	else
             {
             	return $model->firstErrors;

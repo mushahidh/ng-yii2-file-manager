@@ -30,7 +30,7 @@ class Software extends \yii\db\ActiveRecord
         return [
           
             [['id'], 'integer'],
-            [['sowtwarename', 'downloadlink'], 'string', 'max' => 450],
+            [['softwarename', 'downloadlink'], 'string', 'max' => 450],
             [['version'], 'string', 'max' => 45],
         ];
     }
@@ -42,7 +42,7 @@ class Software extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'sowtwarename' => Yii::t('app', 'Sowtwarename'),
+            'softwarename' => Yii::t('app', 'Sowtwarename'),
             'version' => Yii::t('app', 'Version'),
             'downloadlink' => Yii::t('app', 'Downloadlink'),
         ];
