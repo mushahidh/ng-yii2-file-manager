@@ -79,12 +79,12 @@ Yii2 Angular File Manager is a platform where a user can create folders, upload 
 Directive used for file Uploading is ng-file-upload. For more details please visit (https://github.com/danialfarid/ng-file-upload)
 
 ## Configuring Yii2
-1. Open Command Line and clone the project from (https://github.com/mushahidh/ng-yii2-file-manager) to 'www' Folder
+- Open Command Line and clone the project from (https://github.com/mushahidh/ng-yii2-file-manager) to 'www' Folder
 ```
 git clone https://github.com/mushahidh/ng-yii2-file-manager.git
 ```
-2.After cloning the project in the 'www' folder go to project folder www/ng-yii2-file-manager and write 'compose update'.
-3.After successfull compose update run 'php init'.
+- After cloning the project in the 'www' folder go to project folder www/ng-yii2-file-manager and write 'compose update'.
+- After successfull compose update run 'php init'.
 
 ## Configure Database					
 Go to www\ng-yii2-file-manager\common\data and copy open the 'sql' file, copy all the content. Create Database 
