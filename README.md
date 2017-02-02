@@ -27,27 +27,28 @@ Go to www\ng-yii2-file-manager\common\data and copy open the 'sql' file, copy al
 ```
 database name : file_uploader
 paste the 'sql' file content in sql after choosing the database 'file_uploader'
-```
-	```												
-		project/
-api/
-backend/	
-common/  
-console/
-environments/							
-vendor/							//Yii folders ends here
-composer.json
-composer.lock
-init
-init
-LICENSE.MD
-README.MD
-requirements
-yii
-yii
-...................................................................
-Frontend/					//Angular Folder
-```
+
+								```												
+				project/
+		api/
+		backend/	
+		common/  
+		console/
+		environments/							
+		vendor/							//Yii folders ends here
+		composer.json
+		composer.lock
+		init
+		init
+		LICENSE.MD
+		README.MD
+		requirements
+		yii
+		yii
+		          ...................................................
+		Frontend/					//Angular Folder
+								```
+
 ## How to access
 - Go to http://localhost/ng-yii2-file-manager/frontend/index.html#/login 
 - Username : admin , password : admin
