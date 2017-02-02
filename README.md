@@ -23,9 +23,10 @@ git clone https://github.com/mushahidh/ng-yii2-file-manager.git
 ```
 
 ## Configure Database					
-Go to www\ng-yii2-file-manager\common\data and copy open the 'sql' file, copy all the content. Create Database 
+- Go to www\ng-yii2-file-manager\common\data and copy open the 'sql' file, copy all the content. Create Database 
 ```
 database name : file_uploader
+```
 paste the 'sql' file content in sql after choosing the database 'file_uploader'
 ```
 																				
