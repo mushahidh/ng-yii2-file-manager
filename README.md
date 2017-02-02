@@ -5,26 +5,26 @@ Modules : Create Folder, Upload Files ,  Download Files
 														
 Yii2 Angular File Manager is a platform where a user can create folders, upload both bulk and single file and download them.
 																
-														```																```
-														project/
-												api/
-												backend/	
-												common/  
-												console/
-												environments/							
-												vendor/							//Yii folders ends here
-												composer.json
-												composer.lock
-												init
-												init
-												LICENSE.MD
-												README.MD
-												requirements
-												yii
-												yii
-												...................................................................
-												Frontend/					Angular Folder
-															```
+										```																```
+										project/
+								api/
+								backend/	
+								common/  
+								console/
+								environments/							
+								vendor/							//Yii folders ends here
+								composer.json
+								composer.lock
+								init
+								init
+								LICENSE.MD
+								README.MD
+								requirements
+								yii
+								yii
+								...................................................................
+								Frontend/					Angular Folder
+											```
 																												
 Directive used for file Uploading is ng-file-upload. For more details please visit (https://github.com/danialfarid/ng-file-upload)
 
